@@ -1,0 +1,12 @@
+.film-list {
+  display: grid;
+  grid-template-columns: 500px 500px;
+  gap: 15px;
+  justify-content: center;
+  justify-items: center;
+}
+
+.spinner {
+  position: absolute;
+  transform: translate(50%, 50%);
+}

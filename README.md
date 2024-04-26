@@ -1,2 +1,1 @@
-# moovie-app
- simple moovie app
+# Simple movie app
