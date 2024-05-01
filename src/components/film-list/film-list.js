@@ -4,13 +4,16 @@ import { Component } from 'react'
 import { Alert, Spin } from 'antd'
 
 import './film-list.css'
-
 import FilmCard from '../film-card/film-card'
 
 export default class FilmList extends Component {
-  state = {}
+  state = {
+    get: null,
+  }
 
   render() {
+    const { get } = this.state
+    console.log(get)
     const { films, loading, error } = this.props
     console.log(films, 'Получена дата, отправляю на мапинг')
     const elements = films.map((value) => {
@@ -18,13 +21,13 @@ export default class FilmList extends Component {
     })
 
     const errorContent = (
-      <Alert message="Error" description="Произошла ошибка, поробуйте позже." type="error" showIcon />
+      <Alert message="Error" description="Произошла ошибка, поробуйте позже." type="error" showIcon className="error" />
     )
 
     const hasData = !(loading || error)
 
     const errorMessage = error ? errorContent : null
-    const spinner = loading ? <Spin /> : null
+    const spinner = loading ? <Spin className="spinner" /> : null
     const content = hasData ? elements : null
     return (
       <ul className="film-list">

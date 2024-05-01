@@ -5,7 +5,7 @@ function FilmCard({ data }) {
   const splitOverview = data.overview.split('.')
   return (
     <li key={data.id} className="movie-column">
-      <img src={posterLink} alt="" className="poster_image" />
+      <img src={posterLink} alt={`${data.title}`} className="poster_image" />
       <div className="main-content">
         <h2>{data.title}</h2>
         <p>{data.release_date}</p>

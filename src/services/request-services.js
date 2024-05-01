@@ -24,8 +24,13 @@ export default class RequestServices {
     return null
   }
 
-  async getAllMovies() {
-    const res = await this.getData('discover/movie?page=1&sort_by=popularity.desc')
+  async getAllMovies(page) {
+    const res = await this.getData(`movie/popular?language=en-US&page=${page}`)
+    return res.results
+  }
+
+  async searchMovies(query, page = 1) {
+    const res = await this.getData(`search/movie?query=${query}&page=${page}`)
     return res.results
   }
 }
