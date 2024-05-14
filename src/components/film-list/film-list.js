@@ -14,10 +14,10 @@ export default class FilmList extends Component {
   render() {
     const { get } = this.state
     console.log(get)
-    const { films, loading, error } = this.props
+    const { films, loading, error, changeRating } = this.props
     console.log(films, 'Получена дата, отправляю на мапинг')
     const elements = films.map((value) => {
-      return <FilmCard data={value} key={value.id} />
+      return <FilmCard data={value} key={value.id} changeRating={changeRating} />
     })
 
     const errorContent = (

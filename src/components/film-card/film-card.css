@@ -1,12 +1,57 @@
-.movie-column {
+.main-content {
   display: flex;
-  width: 451px;
-  height: 279px;
-  box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.25);
+  flex-direction: column;
+  width: 300px;
+  margin-left: 10px;
 }
 
-.main-content {
-  width: 300px;
+.cardHeader {
+  display: flex;
+}
+
+.vote-average {
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: auto;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  flex-shrink: 0;
+}
+
+.bad-vote {
+  border: 2px solid #e90000;
+  border-radius: 50%;
+}
+
+.ok-vote {
+  border: 2px solid #e97e00;
+  border-radius: 50%;
+}
+
+.good-vote {
+  border: 2px solid #e9d100;
+  border-radius: 50%;
+}
+
+.super-vote {
+  border: 2px solid #66e900;
+  border-radius: 50%;
+}
+
+.genreElem {
+  font-size: 12px;
+  padding: 3px;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+}
+
+.movie-column {
+  display: flex;
+  width: 475px;
+  height: 279px;
+  box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.25);
 }
 
 .poster_image {
@@ -17,4 +62,9 @@
 .genre {
   display: flex;
   gap: 5px;
+}
+
+.rating {
+  margin-top: auto;
+  margin-bottom: 10px;
 }

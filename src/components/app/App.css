@@ -4,12 +4,12 @@
 }
 
 .search-content {
-  width: 70%;
+  max-width: 970px;
   margin: 0 auto;
 }
 
 .input {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .pagination {
