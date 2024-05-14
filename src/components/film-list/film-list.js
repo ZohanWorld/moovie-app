@@ -7,15 +7,10 @@ import './film-list.css'
 import FilmCard from '../film-card/film-card'
 
 export default class FilmList extends Component {
-  state = {
-    get: null,
-  }
+  state = {}
 
   render() {
-    const { get } = this.state
-    console.log(get)
     const { films, loading, error, changeRating } = this.props
-    console.log(films, 'Получена дата, отправляю на мапинг')
     const elements = films.map((value) => {
       return <FilmCard data={value} key={value.id} changeRating={changeRating} />
     })

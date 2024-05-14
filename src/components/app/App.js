@@ -40,7 +40,6 @@ export default class App extends Component {
   }
 
   onMoviesLoaded = (movie) => {
-    console.log(movie.total_pages)
     this.setState({ films: movie.results, loading: false, totalPages: movie.total_pages })
   }
 
@@ -73,8 +72,7 @@ export default class App extends Component {
   }
 
   changeTab = (key) => {
-    const { currentTab, sessionId } = this.state
-    console.log(key, currentTab, sessionId)
+    const { sessionId } = this.state
     this.setState({ currentTab: key, loading: true, error: false })
     if (key === '2') {
       this.request
